@@ -10,7 +10,7 @@ export async function main(ns) {
 
 	while (i.length < ns.getPurchasedServerLimit()) {
 		if (ns.getServerMoneyAvailable("home") > purchasedServerCost) {
-			var hostName = ns.purchaseServer(`${serverSize}gb-server ` + i.length, serverSize)
+			let hostName = ns.purchaseServer(`${serverSize}gb-server ` + i.length, serverSize)
 			await ns.scp("worms.ns", hostName);
 			await ns.scp("hackservers.ns", hostName);
 			ns.exec("worms.ns -t 6 phantasy silver-helix omega-net iron-gym zer0", hostName);
