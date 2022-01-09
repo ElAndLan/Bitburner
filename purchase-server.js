@@ -16,9 +16,11 @@ export async function main(ns) {
 			ns.exec("worms.ns -t 6 phantasy silver-helix omega-net iron-gym zer0", hostName);
 			++i;
 		} else {
-			ns.alert(`A server of size ${serverSize}gb costs ${purchasedServerCost}`);
-			sleep(5);
+			ns.alert(`You cannot afford any more servers. Script is ending`);
+			return
 		}
+		
+		ns.sleep(1000);
 	}
 
 	if (i.length === ns.getPurchasedServerLimit()) ns.alert("You are at your limit of servers!");
