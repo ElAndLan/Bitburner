@@ -5,6 +5,7 @@ export async function main(ns) {
 
 	// Iterator for the while loop
 	let i = ns.getPurchasedServers();
+	i = i.length;
 	// Cost of the server size you want to automate buying
 	let purchasedServerCost = ns.getPurchasedServerCost(serverSize);
 
