@@ -20,7 +20,7 @@ export async function main(ns) {
 			return
 		}
 		
-		ns.sleep(1000);
+		await ns.sleep(1000);
 	}
 
 	if (i.length === ns.getPurchasedServerLimit()) ns.alert("You are at your limit of servers!");
